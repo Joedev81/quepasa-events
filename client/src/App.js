@@ -6,7 +6,6 @@ import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import About from "./pages/About"; 
 import "./App.css";
-import logo from "./assets/logo/quelogo.jpeg";
 
 function App() {
   return (

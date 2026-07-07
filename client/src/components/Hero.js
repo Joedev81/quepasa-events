@@ -12,29 +12,30 @@ function Hero() {
   const [loaded, setLoaded] = useState(false);
 
   // PRELOAD IMAGES
-  useEffect(() => {
-    let loadedCount = 0;
+ useEffect(() => {
+  Promise.all(
+    slides.map(
+      (img) =>
+        new Promise((resolve) => {
+          const image = new Image();
+          image.src = img;
 
-    slides.forEach((img) => {
-      const image = new Image();
-      image.src = img;
-
-      image.onload = () => {
-        loadedCount += 1;
-
-        if (loadedCount === slides.length) {
-          setLoaded(true);
-        }
-      };
-    });
-  }, []);
-
+          image.onload = resolve;
+          image.onerror = resolve;
+        })
+    )
+  ).then(() => {
+    setLoaded(true);
+  });
+ }, []);
+ 
   // SLIDER TIMER
   useEffect(() => {
     if (!loaded) return;
 
     const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
+      setCurrent((prev) => (prev + 1) %
+    slides.length);
     }, 5000);
 
     return () => clearInterval(interval);
