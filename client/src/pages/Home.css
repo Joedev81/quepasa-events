@@ -1,0 +1,166 @@
+/* Home.css */
+
+/* General padding for sections */
+.services-preview,
+.gallery-preview,
+.why-choose-us,
+.cta-banner {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Section Titles */
+.services-preview h2,
+.gallery-preview h2,
+.why-choose-us h2,
+.cta-banner h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #6b21a8; /* luxury purple */
+  font-weight: 700;
+}
+
+/* Services Cards */
+.services-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.service-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 250px;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 15px 0;
+  font-size: 20px;
+  color: #6b21a8;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* Gallery Grid */
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  background-color: #f3f0f8; /* soft purple-ish background */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  color: #6b21a8; /* luxury deep purple */
+  font-size: 36px;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+.why-choose-us .features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.why-choose-us .feature {
+  background-color: #fff; /* white cards */
+  padding: 30px 20px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-us .feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+.why-choose-us .feature h3 {
+  color: #6b21a8;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.why-choose-us .feature p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* CTA Banner */
+.cta-banner {
+  background: #6b21a8; /* luxury purple */
+  color: white;
+  padding: 10px 10px;
+  border-radius: 15px;
+}
+
+.cta-banner button {
+  background: rgb(255, 255, 255);
+  color: #6b21a8;
+  border: none;
+  padding: 14px 28px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.cta-banner button:hover {
+  transform: scale(1.05);
+  background: #e0d0ff;
+}
+
+/* View Full Gallery button style */
+.gallery-preview .view-all-btn {
+  background: linear-gradient(135deg, #7e22ce, #a855f7); /* luxury purple gradient */
+  color: white;
+  font-size: 18px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  margin-top: 20px;
+}
+
+.gallery-preview .view-all-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #a855f7, #c084fc); /* lighter purple on hover */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
