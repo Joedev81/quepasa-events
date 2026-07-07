@@ -1,0 +1,350 @@
+.service-card {
+
+    background: #111;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    color: white;
+
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.25);
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+}
+
+
+.service-card:hover {
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.6);
+
+}
+
+
+
+/* IMAGE */
+
+.service-image {
+
+    height: 230px;
+
+    overflow: hidden;
+
+}
+
+
+.service-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: opacity 0.8s ease, transform 0.5s ease;
+
+}
+
+
+.service-card:hover .service-image img {
+
+    transform: scale(1.05);
+
+}
+
+
+
+/* CONTENT */
+
+.service-content {
+
+    padding: 25px;
+
+    text-align: center;
+
+}
+
+
+.service-content h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+
+    color: #a855f7;
+
+}
+
+
+.service-content p {
+
+    color: #ddd;
+
+    line-height: 1.6;
+
+}
+
+
+
+/* BUTTON */
+
+.explore-btn {
+
+    margin-top: 20px;
+
+    padding: 12px 30px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #a855f7;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+
+.explore-btn:hover {
+
+    background: white;
+
+    color: #a855f7;
+
+    transform: scale(1.05);
+
+}
+
+
+
+
+
+/* =====================
+   PREMIUM MODAL
+===================== */
+
+
+.modal-overlay {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    backdrop-filter: blur(5px);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+    animation: fadeIn 0.3s ease;
+
+}
+
+
+
+.image-modal {
+
+    position: relative;
+
+    background: #111;
+
+    width: 90%;
+
+    max-width: 900px;
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    color: white;
+
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.5);
+
+    animation: slideUp 0.4s ease;
+
+}
+
+
+
+.image-modal h2 {
+
+    color: #a855f7;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* CLOSE BUTTON */
+
+.close-btn {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 20px;
+
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+}
+
+
+.close-btn:hover {
+
+    color: #a855f7;
+
+}
+
+
+
+
+
+/* GALLERY INSIDE MODAL */
+
+.modal-gallery {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 15px;
+
+}
+
+
+
+.modal-gallery img {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    transition: 0.3s ease;
+
+}
+
+
+.modal-gallery img:hover {
+
+    transform: scale(1.05);
+
+}
+
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+@keyframes slideUp {
+
+    from {
+
+        transform: translateY(40px);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+
+    .service-image {
+
+        height: 200px;
+
+    }
+
+
+    .image-modal {
+
+        width: 95%;
+
+        padding: 20px;
+
+    }
+
+
+    .modal-gallery {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .modal-gallery img {
+
+        height: 200px;
+
+    }
+
+}
