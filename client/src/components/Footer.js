@@ -35,7 +35,7 @@ function Footer() {
           <h3>Contact</h3>
 
           <p>📍 Nairobi, Kenya</p>
-          <p>📞 +254 712 345 678</p>
+          <p>📞 +254 723 112 396</p>
           <p>✉️ info@quepasaevents.com</p>
         </div>
 
