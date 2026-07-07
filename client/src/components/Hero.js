@@ -5,27 +5,28 @@ import setup1 from "../assets/images/setup1.jpg";
 import setup2 from "../assets/images/setup2.jpg";
 import setup3 from "../assets/images/setup3.jpg";
 
-function Hero() {
-  const slides = [setup1, setup2, setup3];
+const slides = [setup1, setup2, setup3];
 
+function Hero() {
   const [current, setCurrent] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
   // PRELOAD IMAGES
  useEffect(() => {
-  Promise.all(
-    slides.map(
-      (img) =>
-        new Promise((resolve) => {
-          const image = new Image();
-          image.src = img;
+  let loadedCount = 0;
 
-          image.onload = resolve;
-          image.onerror = resolve;
-        })
-    )
-  ).then(() => {
-    setLoaded(true);
+  slides.forEach((img) => {
+    const image = new Image();
+    image.src = img;
+
+    image.onload = () => {
+      loadedCount += 1;
+
+      if (loadedCount === slides.length)
+      {
+        setLoaded(true);
+      }
+    };
   });
  }, []);
  
@@ -40,16 +41,6 @@ function Hero() {
 
     return () => clearInterval(interval);
   }, [loaded]);
-
-  if (!loaded) {
-    return (
-      <section className="hero loading">
-        <div className="hero-content">
-          <h1>Loading...</h1>
-        </div>
-      </section>
-    );
-  }
 
   return (
     <section className="hero">
