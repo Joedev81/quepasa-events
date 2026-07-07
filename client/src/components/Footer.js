@@ -43,9 +43,9 @@ function Footer() {
         <div className="footer-column">
           <h3>Follow</h3>
 
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a>
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-          <a href="https://tiktok.com" target="_blank" rel="noreferrer">TikTok</a>
+          <a href="https://facebook.com/que_pasaevents" target="_blank" rel="noreferrer">Facebook</a>
+          <a href="https://instagram.com/que_pasaevents" target="_blank" rel="noreferrer">Instagram</a>
+          <a href="https://tiktok.com/que_pasaevents" target="_blank" rel="noreferrer">TikTok</a>
         </div>
       </div>
 
