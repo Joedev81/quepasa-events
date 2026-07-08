@@ -3,79 +3,75 @@ import ImageModal from "./ImageModal";
 import "./ServiceCard.css";
 
 function ServiceCard({ service }) {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [showModal, setShowModal] = useState(false);
 
-    const [currentImage, setCurrentImage] = useState(0);
-    const [showModal, setShowModal] = useState(false);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % service.images.length);
+    }, 4000);
 
+    return () => clearInterval(interval);
+  }, [service.images.length]);
 
-    useEffect(() => {
+  return (
+    <>
+      <div className="service-card">
+        <div className="service-image">
+          <img
+            src={service.images[currentImage]}
+            alt={service.title}
+          />
 
-        const interval = setInterval(() => {
+          <div className="image-overlay"></div>
 
-            setCurrentImage((prev) =>
-                (prev + 1) % service.images.length
-            );
+          <span className="service-badge">Premium</span>
+        </div>
 
-        }, 4000);
+        <div className="service-content">
+          <h3>{service.title}</h3>
 
+          <div className="service-rating">
+            ★★★★★
+            <span> Luxury Experience</span>
+          </div>
 
-        return () => clearInterval(interval);
+          <p>{service.description}</p>
 
-    }, [service.images.length]);
+          <div className="service-features">
+            <p>✓ Luxury Styling</p>
+            <p>✓ Custom Design</p>
+            <p>✓ Professional Team</p>
+          </div>
 
+          <div className="card-actions">
 
-    return (
+            <button
+               className="explore-btn"
+               onClick={() => 
+                setShowModal(true)
+               }
+            >Explore Gallery →
+            </button>
 
-        <>
+            <button  
+               className="book-btn"
+               onClick={() => 
+                window.location.href="/contact"}
+            >Book This Services</button>
+          </div>
+        </div>
+      </div>
 
-            <div className="service-card">
-
-                <div className="service-image">
-
-                    <img
-                        src={service.images[currentImage]}
-                        alt={service.title}
-                    />
-
-                </div>
-
-
-                <h3>{service.title}</h3>
-
-                <p>{service.description}</p>
-
-
-                <button
-                    className="explore-btn"
-                    onClick={() => setShowModal(true)}
-                >
-                    Explore
-                </button>
-
-
-            </div>
-
-
-
-            {showModal && (
-
-                <ImageModal
-
-                    title={service.title}
-
-                    images={service.images}
-
-                    close={() => setShowModal(false)}
-
-                />
-
-            )}
-
-        </>
-
-    );
-
+      {showModal && (
+        <ImageModal
+          title={service.title}
+          images={service.images}
+          close={() => setShowModal(false)}
+        />
+      )}
+    </>
+  );
 }
-
 
 export default ServiceCard;

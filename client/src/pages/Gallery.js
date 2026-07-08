@@ -54,6 +54,56 @@ import gallery49 from "../assets/gallery/gallery49.jpeg";
 import gallery50 from "../assets/gallery/gallery50.jpeg";
 import gallery51 from "../assets/gallery/gallery51.jpeg";
 import gallery52 from "../assets/gallery/gallery52.jpeg";
+import gallery53 from "../assets/gallery/gallery53.jpeg";
+import gallery54 from "../assets/gallery/gallery54.jpeg";
+import gallery55 from "../assets/gallery/gallery55.jpeg";
+import gallery56 from "../assets/gallery/gallery56.jpeg";
+import gallery57 from "../assets/gallery/gallery57.jpeg";
+import gallery58 from "../assets/gallery/gallery58.jpeg";
+import gallery59 from "../assets/gallery/gallery59.jpeg";
+import gallery60 from "../assets/gallery/gallery60.jpeg";
+import gallery61 from "../assets/gallery/gallery61.jpeg";
+import gallery62 from "../assets/gallery/gallery62.jpeg";
+import gallery63 from "../assets/gallery/gallery63.jpeg";
+import gallery64 from "../assets/gallery/gallery64.jpeg";
+import gallery65 from "../assets/gallery/gallery65.jpeg";
+import gallery66 from "../assets/gallery/gallery66.jpeg";
+import gallery67 from "../assets/gallery/gallery67.jpeg";
+import gallery68 from "../assets/gallery/gallery68.jpeg";
+import gallery69 from "../assets/gallery/gallery69.jpeg";
+import gallery70 from "../assets/gallery/gallery70.jpeg";
+import gallery71 from "../assets/gallery/gallery71.jpeg";
+import gallery72 from "../assets/gallery/gallery72.jpeg";
+import gallery73 from "../assets/gallery/gallery73.jpeg";
+import gallery74 from "../assets/gallery/gallery74.jpeg";
+import gallery75 from "../assets/gallery/gallery75.jpeg";
+import gallery76 from "../assets/gallery/gallery76.jpeg";
+import gallery77 from "../assets/gallery/gallery77.jpeg";
+import gallery78 from "../assets/gallery/gallery78.jpeg";
+import gallery79 from "../assets/gallery/gallery79.jpeg";
+import gallery80 from "../assets/gallery/gallery80.jpeg";
+import gallery81 from "../assets/gallery/gallery81.jpeg";
+import gallery82 from "../assets/gallery/gallery82.jpeg";
+import gallery83 from "../assets/gallery/gallery83.jpeg";
+import gallery84 from "../assets/gallery/gallery84.jpeg";
+import gallery85 from "../assets/gallery/gallery85.jpeg";
+import gallery86 from "../assets/gallery/gallery86.jpeg";
+import gallery87 from "../assets/gallery/gallery87.jpeg";
+import gallery88 from "../assets/gallery/gallery88.jpeg";
+import gallery89 from "../assets/gallery/gallery89.jpeg";
+import gallery90 from "../assets/gallery/gallery90.jpeg";
+import gallery91 from "../assets/gallery/gallery91.jpeg";
+import gallery92 from "../assets/gallery/gallery92.jpeg";
+import gallery93 from "../assets/gallery/gallery93.jpeg";
+import gallery94 from "../assets/gallery/gallery94.jpeg";
+import gallery95 from "../assets/gallery/gallery95.jpeg";
+import gallery96 from "../assets/gallery/gallery96.jpeg";
+import gallery97 from "../assets/gallery/gallery97.jpeg";
+import gallery98 from "../assets/gallery/gallery98.jpeg";
+import gallery99 from "../assets/gallery/gallery99.jpeg";
+
+
+
 
 const galleryImages = [
   gallery1,
@@ -108,6 +158,53 @@ const galleryImages = [
   gallery50,
   gallery51,
   gallery52,
+  gallery53,
+  gallery54,
+  gallery55,
+  gallery56,
+  gallery57,
+  gallery58,
+  gallery59,
+  gallery60,
+  gallery61,
+  gallery62,
+  gallery63,
+  gallery64,
+  gallery65,
+  gallery66,
+  gallery67,
+  gallery68,
+  gallery69,
+  gallery70,
+  gallery71,
+  gallery72,
+  gallery73,
+  gallery74,
+  gallery75,
+  gallery76,
+  gallery77,
+  gallery78,
+  gallery79,
+  gallery80,
+  gallery81,
+  gallery82,
+  gallery83,
+  gallery84,
+  gallery85,
+  gallery86,
+  gallery87,
+  gallery88,
+  gallery89,
+  gallery90,
+  gallery91,
+  gallery92,
+  gallery93,
+  gallery94,
+  gallery95,
+  gallery96,
+  gallery97,
+  gallery98,
+  gallery99,
 ];
 
 export default function Gallery() {
