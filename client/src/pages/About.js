@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "./About.css";
+import gallery86 from "../assets/gallery/gallery86.jpeg";
 
 export default function About() {
   const cardRef = useRef(null);
@@ -39,9 +40,9 @@ export default function About() {
         <div className="about-card">
           <h2>Our Mission</h2>
           <p>
-            To deliver exceptional event experiences by providing reliable, 
-            creative, and fully customizable solutions that leave lasting memories. 
-            Our mission is to ensure every celebration is seamless, joyful, 
+            To deliver exceptional event experiences by providing reliable,
+            creative, and fully customizable solutions that leave lasting memories.
+            Our mission is to ensure every celebration is seamless, joyful,
             and unforgettable for our clients and their guests.
           </p>
         </div>
@@ -49,9 +50,9 @@ export default function About() {
         <div className="about-card">
           <h2>Our Vision</h2>
           <p>
-            To be the most trusted and innovative event management company 
-            in Kenya, recognized for creativity, attention to detail, and 
-            excellence in customer service. We aim to set the standard 
+            To be the most trusted and innovative event management company
+            in Kenya, recognized for creativity, attention to detail, and
+            excellence in customer service. We aim to set the standard
             for unforgettable celebrations and professional event execution.
           </p>
         </div>
@@ -59,9 +60,35 @@ export default function About() {
         <div className="about-card">
           <h2>Our Values</h2>
           <p>
-            Quality, Creativity, and Integrity guide everything we do. 
-            We value strong relationships with clients, vendors, and our team, 
+            Quality, Creativity, and Integrity guide everything we do.
+            We value strong relationships with clients, vendors, and our team,
             ensuring honesty, respect, and excellence in every event we deliver.
+          </p>
+        </div>
+      </section>
+
+      {/* Our Story */}
+      <section className="our-story">
+        <div className="story-image">
+          <img src={gallery86} alt="Que Pasa Events" />
+        </div>
+
+        <div className="story-content">
+          <span>OUR STORY</span>
+
+          <h2>Creating Moments That Last a Lifetime</h2>
+
+          <p>
+            At Que Pasa Events, we believe every celebration deserves to be
+            extraordinary. From intimate gatherings to grand occasions, we bring
+            creativity, elegance and professionalism to every event we plan.
+          </p>
+
+          <p>
+            Our team is passionate about transforming ideas into unforgettable
+            experiences. Every decoration, every setup and every detail is carefully
+            planned to reflect our clients' vision while creating memories that will
+            last for years to come.
           </p>
         </div>
       </section>
