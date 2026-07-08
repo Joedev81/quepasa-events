@@ -19,8 +19,10 @@ function ServiceCard({ service }) {
       <div className="service-card">
         <div className="service-image">
           <img
+            key={currentImage}
             src={service.images[currentImage]}
             alt={service.title}
+            className="service-image fade-image"
           />
 
           <div className="image-overlay"></div>
