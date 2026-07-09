@@ -1,0 +1,354 @@
+.event-video {
+  padding: 80px 20px;
+  margin: 100px auto;
+  max-width: 1500px;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 12, 22, 0.96),
+    rgba(28, 18, 45, 0.96)
+  );
+  border-radius: 35px;
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 
+  0 0 40px rgba(128, 0, 255, 0.18),
+  0 30px 80px rgba(0,0,0,0.35);
+  position: relative;
+  overflow: hidden;
+}
+
+.event-video::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    top: -180px;
+    right: -120px;
+    border-radius: 50%;
+    background: rgba(153, 51, 255, 0.18);
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.event-video::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    bottom: -150px;
+    left: -100px;
+    border-radius: 50%;
+    background: rgba(110, 0, 255, 0.15);
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+
+/* FEATURED VIDEO */
+
+.video-container {
+  max-width: 1450px;
+  height: 600px;
+  margin: auto;
+
+  position: relative;
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 0 35px rgba(128, 0, 255, 0.35),
+    0 25px 60px rgba(0,0,0,0.3);
+
+  animation: fadeInVideo 1.5s ease forwards;
+}
+
+
+.video-container:hover {
+
+  box-shadow:
+    0 0 60px rgba(160,70,255,0.65),
+    0 30px 70px rgba(0,0,0,0.45);
+
+}
+
+
+.video-container video {
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transform:scale(1.05);
+
+  transition:transform 6s ease;
+
+}
+
+
+.video-container:hover video {
+
+  transform:scale(1.1);
+
+}
+
+
+/* DARK CINEMATIC OVERLAY */
+
+.video-shade {
+
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.15)
+  );
+
+}
+
+
+/* TEXT */
+
+.video-content {
+
+  position:absolute;
+
+  bottom:50px;
+  left:50px;
+
+  color:white;
+
+  max-width:600px;
+
+}
+
+
+.video-content h2 {
+
+  font-size:3rem;
+
+  margin-bottom:15px;
+
+  letter-spacing:1px;
+
+}
+
+
+.video-content p {
+
+  font-size:1.2rem;
+
+  line-height:1.6;
+
+}
+
+
+/* VIDEO GALLERY */
+
+.videos-grid {
+
+  margin-top:60px;
+
+  display:flex;
+  gap:30px;
+
+  overflow-x:auto;
+  overflow-y:hidden;
+
+  scroll-behavior:smooth;
+
+  padding-bottom:15px;
+}
+
+/* HIDE SCROLLBAR */
+
+.videos-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.videos-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+/* SMALL VIDEO CARDS */
+
+.video-card {
+    flex: 0 0 360px;
+
+    position: relative;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .4s ease;
+
+    background: rgba(255,255,255,.08);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.video-card:hover {
+
+  transform:translateY(-12px);
+
+
+  box-shadow:
+
+  0 0 50px rgba(160,70,255,0.55);
+
+}
+
+
+.video-card video {
+
+  width:100%;
+  
+  aspect-ratio:16/9;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+.video-gallery-header {
+    margin:70px 0 40px;
+    text-align: center;
+}
+
+.video-gallery-header h3{
+    color: white;
+
+    font-size:2.4rem;
+
+    margin-bottom:15px;
+}
+
+.video-gallery-header p{
+    color: rgba(255,255,255,.75);
+
+    max-width:720px;
+
+    margin: auto;
+
+    line-height:1.8;
+}
+
+.video-container,
+.video-gallery-header,
+.videos-grid {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+/* FADE ANIMATION */
+
+@keyframes fadeInVideo {
+
+  from {
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+  }
+
+
+  to {
+
+    opacity:1;
+
+    transform:translateY(0);
+
+  }
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+.video-container {
+
+  height:400px;
+
+}
+
+
+.video-content {
+
+  left:25px;
+
+  bottom:30px;
+
+}
+
+
+.video-content h2 {
+
+  font-size:2rem;
+
+}
+
+
+.video-content p {
+
+  font-size:1rem;
+
+}
+
+
+.videos-grid {
+
+  grid-template-columns:1fr;
+
+}
+
+
+.video-card video {
+
+  height:280px;
+
+}
+
+.video-modal video {
+    width:95%;
+
+    max-height: 70vh;
+}
+
+.close-video {
+    top:15px;
+
+    right:20px;
+
+    font-size:35px;
+}
+
+.prev-video,
+.next-video {
+    font-size:35px;
+}
+
+.prev-video {
+    left:15px;
+}
+
+.next-video {
+    left:15px;
+}
+
+
+}

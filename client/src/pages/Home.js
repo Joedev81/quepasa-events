@@ -3,6 +3,7 @@ import Hero from "../components/Hero";
 import "./Home.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import EventVideo from "../components/EventVideo";
 
 // Import your service images
 import service1 from "../assets/service/wedding.jpg";
@@ -103,6 +104,7 @@ function Home() {
             </div>
           ))}
         </div>
+        <EventVideo />
 
         {/* View All Services Button */}
         <div style={{ textAlign: "center", marginTop: "40px" }}>
