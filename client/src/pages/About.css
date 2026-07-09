@@ -178,6 +178,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.our-story.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .story-image img {
@@ -210,9 +218,25 @@
 @media (max-width: 900px) {
   .our-story {
     grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+
+  .story-image img {
+    height: 250px;
+    border-radius: 15px;
+  }
+
+  .story-content {
+    text-align: center;
   }
 
   .story-content h2 {
     font-size: 30px;
+  }
+
+  .story-content p {
+    font-size: 15px;
+    line-height: 1.7;
   }
 }

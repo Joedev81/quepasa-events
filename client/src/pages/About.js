@@ -5,10 +5,12 @@ import gallery86 from "../assets/gallery/gallery86.jpeg";
 export default function About() {
   const cardRef = useRef(null);
   const testimonialRef = useRef(null);
+  const storyRef = useRef(null);
 
   useEffect(() => {
     const cards = cardRef.current.querySelectorAll(".about-card");
     const testimonials = testimonialRef.current.querySelectorAll(".testimonial-card");
+    const story = storyRef.current;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -23,6 +25,8 @@ export default function About() {
 
     cards.forEach((card) => observer.observe(card));
     testimonials.forEach((testimonial) => observer.observe(testimonial));
+
+    if (story) observer.observe(story);
 
     return () => observer.disconnect();
   }, []);
@@ -68,7 +72,7 @@ export default function About() {
       </section>
 
       {/* Our Story */}
-      <section className="our-story">
+      <section ref={storyRef} className="our-story">
         <div className="story-image">
           <img src={gallery86} alt="Que Pasa Events" />
         </div>
