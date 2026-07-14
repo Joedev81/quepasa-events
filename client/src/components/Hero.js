@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Hero.css";
+import { useNavigate } from "react-router-dom";
 
 import setup1 from "../assets/images/setup1.jpg";
 import setup2 from "../assets/images/setup2.jpg";
@@ -10,6 +11,7 @@ const slides = [setup1, setup2, setup3];
 function Hero() {
   const [current, setCurrent] = useState(0);
   const [loaded, setLoaded] = useState(false);
+  const navigate = useNavigate();
 
   // PRELOAD IMAGES
  useEffect(() => {
@@ -57,7 +59,12 @@ function Hero() {
       <div className="hero-content">
         <h1>Transforming Events Into Luxury Experiences</h1>
         <p>Elegant setups for weddings, parties and corporate events</p>
-        <button className="hero-btn">Book Your Event</button>
+        <button 
+           className="hero-btn"
+           onClick={() => navigate("/contact")}
+        >
+          Book Your Event
+        </button>
       </div>
     </section>
   );
